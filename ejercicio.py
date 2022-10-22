@@ -44,7 +44,7 @@ class Motocicleta(Bicicleta):
 
 def catalogar(vehiculo):
     for i in vehiculo:
-        print (type(i).__name__)
+        print (type(i).__name__, "\n",i,"\n")
 
 vehiculo = []        
 A = Vehiculo("rojo", 5)
@@ -62,6 +62,7 @@ vehiculo.append(D)
 E = Motocicleta(1000, 10, "deportiva", "rojo", 4)
 #print("\n",E)
 vehiculo.append(E)
-print(vehiculo)
+catalogar(vehiculo)
+
 
 
