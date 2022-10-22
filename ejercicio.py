@@ -48,18 +48,21 @@ def catalogar(vehiculo):
         print (type(i).__name__ + ":" + "\n",i,"\n")
 
 def catalogar_ruedas(lista_vehiculo, ruedas):
+    contador=0
     for i in lista_vehiculo:
-        if i.ruedas == 
+        if i.ruedas == ruedas:
+            contador +=1
+    print ("Se han encontrado {} vehiculos con {} ruedas".format(contador, ruedas))
         
 
 vehiculo = []        
-A = Vehiculo("rojo", 5)
+A = Vehiculo("rojo", 0)
 #print(A)
 vehiculo.append(A)
 B= Coche(100, 50, "azul", 4)
 #print("\n",B)
 vehiculo.append(B)
-C= Camioneta(1000, 200, 60, "negro", 6)
+C= Camioneta(1000, 200, 60, "negro", 2)
 #print("\n",C)
 vehiculo.append(C)
 D = Bicicleta("urbana", "verde", 4)
