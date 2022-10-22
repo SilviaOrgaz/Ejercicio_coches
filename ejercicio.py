@@ -1,5 +1,6 @@
 class Vehiculo:
 
+#Atributos color, ruedas
     def __init__(self, col, n_ruedas):
         self.color = col
         self.ruedas = n_ruedas
@@ -46,6 +47,10 @@ def catalogar(vehiculo):
     for i in vehiculo:
         print (type(i).__name__ + ":" + "\n",i,"\n")
 
+def catalogar_ruedas(lista_vehiculo, ruedas):
+    for i in lista_vehiculo:
+        if i.ruedas == 
+        
 
 vehiculo = []        
 A = Vehiculo("rojo", 5)
@@ -64,6 +69,9 @@ E = Motocicleta(1000, 10, "deportiva", "rojo", 4)
 #print("\n",E)
 vehiculo.append(E)
 catalogar(vehiculo)
+catalogar_ruedas(vehiculo, 0)
+catalogar_ruedas(vehiculo, 2)
+catalogar_ruedas(vehiculo, 4)
 
 
 
