@@ -42,12 +42,14 @@ class Motocicleta(Bicicleta):
     def __str__(self):
         return super().__str__() + "\n" + "La velocidad de la motocicleta es de {} km/h y la cilindrada es de {}".format(self.velocidad, self.cilindrada)
 
-    
+def catalogar(vehiculo):
+    for i in vehiculo:
+        print (type(i).__name__)
 
 vehiculo = []        
 A = Vehiculo("rojo", 5)
 #print(A)
-vehiculo.insert(A)
+vehiculo.append(A)
 B= Coche(100, 50, "azul", 4)
 #print("\n",B)
 vehiculo.append(B)
