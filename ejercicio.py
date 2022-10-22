@@ -15,7 +15,7 @@ class Coche(Vehiculo):
         self.cilindrada = cil
 
     def __str__(self):
-        return super().__str__ ()+ "\n" + "La velocidad del vehículo es {} km/h y cilindrada {} cc".format(self.velocidad, self.cilindrada)
+        return super().__str__ ()+ "\n" + "La velocidad del vehículo es {} km/h y la cilindrada {} cc".format(self.velocidad, self.cilindrada)
 
 class Camioneta(Coche):
     def __init__(self, carga, vel, cil, col, n_ruedas):
@@ -32,6 +32,15 @@ class Bicicleta(Vehiculo):
 
     def __str__(self):
         return super().__str__() + "\n" + "El tipo de bicicleta es {}".format(self.tipo)
+
+class Motocicleta(Bicicleta):
+    def __init__(self, vel, cil, tipo, col, n_ruedas):
+        super().__init__(tipo, col, n_ruedas)
+        self.velocidad = vel
+        self.cilindrada= cil
+
+    def __str__(self):
+        return super().__str__() + "\n" + "La velocidad de la motocicleta es de {} km/h y la cilindrada es de {}".format(self.velocidad, self.cilindrada)
 
     
 
