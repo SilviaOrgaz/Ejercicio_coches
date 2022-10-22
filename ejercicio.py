@@ -15,10 +15,11 @@ class Coche(Vehiculo):
         self.cilindrada = cil
 
     def __str__(self):
-        return "La velocidad del vehículo es {} km/h y cilindrada {} cc".format(self.velocidad, self.cilindrada)
+        return super().__str__ ()+ "\n" + "La velocidad del vehículo es {} km/h y cilindrada {} cc".format(self.velocidad, self.cilindrada)
     
 
         
 A = Vehiculo("rojo", 5)
 print(A)
-
+B= Coche(100, 50, "azul", 4)
+print(B)
