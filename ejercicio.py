@@ -44,14 +44,22 @@ class Motocicleta(Bicicleta):
 
     
 
-        
+vehiculo = []        
 A = Vehiculo("rojo", 5)
-print(A)
+#print(A)
+vehiculo.insert(A)
 B= Coche(100, 50, "azul", 4)
-print("\n",B)
+#print("\n",B)
+vehiculo.append(B)
 C= Camioneta(1000, 200, 60, "negro", 6)
-print("\n",C)
+#print("\n",C)
+vehiculo.append(C)
 D = Bicicleta("urbana", "verde", 4)
-print("\n",D)
+#print("\n",D)
+vehiculo.append(D)
 E = Motocicleta(1000, 10, "deportiva", "rojo", 4)
-print("\n",E)
+#print("\n",E)
+vehiculo.append(E)
+print(vehiculo)
+
+
