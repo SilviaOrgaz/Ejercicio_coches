@@ -7,12 +7,17 @@ class Vehiculo:
     def __str__(self):
         return "El color del vehículo es {} y el número de ruedas es {}".format(self.color, self.ruedas)
 
-class Coche:
+class Coche(Vehiculo):
 
-    def __init__(self, velocidad, cilindrada):
-        self.velocidad = velocidad
-        self.cilindrada = cilindrada
-        
+    def __init__(self, vel, cil, col, n_ruedas):
+        super().__init__(col, n_ruedas)
+        self.velocidad = vel
+        self.cilindrada = cil
+
+    def __str__(self):
+        return "La velocidad del vehículo es {} km/h y cilindrada {} cc".format(self.velocidad, self.cilindrada)
+    
+
         
 A = Vehiculo("rojo", 5)
 print(A)
