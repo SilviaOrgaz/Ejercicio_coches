@@ -47,13 +47,18 @@ def catalogar(vehiculo):
     for i in vehiculo:
         print (type(i).__name__ + ":" + "\n",i,"\n")
 
-def catalogar_ruedas(lista_vehiculo, ruedas):
+#Añado None porque estoy metiendo un argumento que es opcional
+def catalogar_ruedas(lista_vehiculo, ruedas=None):
     contador=0
     for i in lista_vehiculo:
-        if i.ruedas == ruedas:
+        if ruedas == None:
             print(type(i).__name__+ ":" + "\n",i,"\n")
-            contador +=1
-    print ("Se han encontrado {} vehiculos con {} ruedas".format(contador, ruedas))
+        else:
+            if i.ruedas == ruedas:
+                print(type(i).__name__+ ":" + "\n",i,"\n")
+                contador +=1
+    if ruedas != None:
+        print ("Se han encontrado {} vehiculos con {} ruedas".format(contador, ruedas))
         
 
 vehiculo = []        
@@ -73,6 +78,7 @@ E = Motocicleta(1000, 10, "deportiva", "rojo", 4)
 #print("\n",E)
 vehiculo.append(E)
 catalogar(vehiculo)
+catalogar_ruedas(vehiculo)
 catalogar_ruedas(vehiculo, 0)
 catalogar_ruedas(vehiculo, 2)
 catalogar_ruedas(vehiculo, 4)
