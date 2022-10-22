@@ -30,6 +30,9 @@ class Bicicleta(Vehiculo):
         super().__init__(col, n_ruedas)
         self.tipo = tipo
 
+    def __str__(self):
+        return super().__str__() + "\n" + "El tipo de bicicleta es {}".format(self.tipo)
+
     
 
         
@@ -39,3 +42,5 @@ B= Coche(100, 50, "azul", 4)
 print("\n",B)
 C= Camioneta(1000, 200, 60, "negro", 6)
 print("\n",C)
+D = Bicicleta("urbana", "verde", 4)
+print("\n",D)
