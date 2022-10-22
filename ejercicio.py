@@ -25,12 +25,17 @@ class Camioneta(Coche):
     def __str__(self):
         return super().__str__() + "\n" + "La carga del camión es de {} kg".format(self.carga)
 
+class Bicicleta(Vehiculo):
+    def __init__(self, tipo, col, n_ruedas):
+        super().__init__(col, n_ruedas)
+        self.tipo = tipo
+
     
 
         
 A = Vehiculo("rojo", 5)
 print(A)
 B= Coche(100, 50, "azul", 4)
-print(B)
+print("\n",B)
 C= Camioneta(1000, 200, 60, "negro", 6)
-print(C)
+print("\n",C)
