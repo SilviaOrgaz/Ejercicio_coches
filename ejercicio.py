@@ -51,6 +51,7 @@ def catalogar_ruedas(lista_vehiculo, ruedas):
     contador=0
     for i in lista_vehiculo:
         if i.ruedas == ruedas:
+            print(type(i).__name__+ ":" + "\n",i,"\n")
             contador +=1
     print ("Se han encontrado {} vehiculos con {} ruedas".format(contador, ruedas))
         
